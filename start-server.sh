@@ -13,7 +13,8 @@ mv ./target/subscriber-0.0.1.jar ..
 cd ..
 
 echo "Starting Services"
-java -jar subscriber-0.0.1.jar &&
+java -jar subscriber-0.0.1.jar &
+sleep 20s;
 java -jar publisher-0.0.1.jar
 echo "Services Started"
 
