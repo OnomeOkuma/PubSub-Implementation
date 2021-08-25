@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Building Publisher Server"
-cd ./Publisher
+cd ./publisher
 mvn package -DskipTests
 
 echo "Starting Publisher Server on port 5000"
@@ -11,7 +11,7 @@ echo "Publisher Server started on port 5000"
 cd ..
 
 echo "Building Subscriber Server"
-cd ./Subscriber
+cd ./pubscriber
 mvn package -DskipTests
 
 echo "Starting Subscriber Server on port 9000"
