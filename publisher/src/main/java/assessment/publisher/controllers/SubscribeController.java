@@ -24,6 +24,7 @@ public class SubscribeController {
         }
 
         subscriberService.subscribe(topic, payload.url);
+        payload.topic = topic;
         return ResponseEntity.ok(payload);
     }
 }
