@@ -26,8 +26,8 @@ public class PublisherTask implements Callable<Boolean> {
     @Override
     public Boolean call() {
         ResponseEntity<String> response = webClient.postForEntity(url, requestPayload, String.class);
-        logger.info("Status Code: {}, URL: {}, requestPayload: {}", response.getStatusCodeValue(), url, requestPayload);
-        return response.getStatusCode() == HttpStatus.CREATED;
+        logger.info("Status Code: {}, URL: {}, requestPayload: {}", response.getStatusCodeValue(), url, requestPayload.toString());
+        return response.getStatusCode() == HttpStatus.OK;
     }
 
 
